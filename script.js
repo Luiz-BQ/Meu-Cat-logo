@@ -27,7 +27,7 @@ function criarCard(item) {
         <span class="badge">${item.categoria}</span>
         <h3>${item.nome}</h3>
         <p>${item.descricao || 'Sem descrição.'}</p>
-        <strong>Nota/Preço: ${item.preco_nota}</strong>
+        <strong>Nota: ${item.nota}</strong>
         <button class="btn-deletar" onclick="excluirItem(${item.id})">❌</button>
     `;
     
@@ -41,7 +41,7 @@ form.addEventListener('submit', async (e) => {
         nome: document.getElementById('nome').value,
         categoria: document.getElementById('categoria').value,
         descricao: document.getElementById('descricao').value,
-        preco_nota: parseFloat(document.getElementById('preco_nota').value)
+        nota: parseFloat(document.getElementById('nota').value)
     };
 
     try {

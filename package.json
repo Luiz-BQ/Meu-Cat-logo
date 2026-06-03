@@ -15,5 +15,13 @@
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "mysql2": "^3.22.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luiz-BQ/Meu-Cat-logo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Luiz-BQ/Meu-Cat-logo/issues"
+  },
+  "homepage": "https://github.com/Luiz-BQ/Meu-Cat-logo#readme"
 }

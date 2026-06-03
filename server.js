@@ -18,9 +18,9 @@ db.connect(err => {
     console.log('Conectado ao banco de dados MySQL.');
 });
 app.post('/itens', (req, res) => {
-    const { nome, categoria, descricao, preco_nota } = req.body;
-    const query = 'INSERT INTO itens (nome, categoria, descricao, preco_nota) VALUES (?, ?, ?, ?)';
-    db.query(query, [nome, categoria, descricao, preco_nota], (err, result) => {
+    const { nome, categoria, descricao, nota } = req.body;
+    const query = 'INSERT INTO itens (nome, categoria, descricao, nota) VALUES (?, ?, ?, ?)';
+    db.query(query, [nome, categoria, descricao, nota], (err, result) => {
         if (err) return res.status(500).send(err);
         res.status(201).send({ id: result.insertId, ...req.body });
     });
